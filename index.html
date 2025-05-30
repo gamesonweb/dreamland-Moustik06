@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DreamLand - Piano</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #000;
+    }
+
+    #renderCanvas {
+      width: 100%;
+      height: 100%;
+      touch-action: none;
+    }
+
+    #ui-overlay {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: white;
+      font-family: 'Arial', sans-serif;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+      transition: opacity 0.5s ease;
+    }
+
+    #toggle-ui {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      width: 32px;
+      height: 32px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+      display: none;
+      z-index: 10;
+    }
+
+    #discovery-list {
+      margin-top: 10px;
+    }
+
+    .discovery-item {
+      opacity: 0.5;
+    }
+
+    .discovered {
+      opacity: 1;
+      color: #4CAF50;
+    }
+
+    #start-message {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      z-index: 100;
+      font-size: 18px;
+      max-width: 80%;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+
+    #start-message button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    #start-message button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+<canvas id="renderCanvas"></canvas>
+
+<button id="toggle-ui">?</button>
+
+<div id="ui-overlay">
+  <h2>DreamLand Piano</h2>
+  <p>Jouez des combinaisons de notes pour révéler le monde des rêves.</p>
+  <p>Activez le levier rouge à droite pour jouer votre séquence.</p>
+
+  <div id="discovery-list">
+    <h3>Découvertes:</h3>
+    <div class="discovery-item" id="discovery-light">✨ Lumière</div>
+    <div class="discovery-item" id="discovery-color">🎨 Couleur</div>
+    <div class="discovery-item" id="discovery-sky">☁️ Ciel</div>
+    <div class="discovery-item" id="discovery-grass">🌿 Herbe</div>
+    <div class="discovery-item" id="discovery-flowers">🌸 Fleurs</div>
+  </div>
+</div>
+
+
+<!-- Script principal géré par Vite -->
+<script type="module" src="/src/main.ts"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const startButton = document.getElementById('start-button');
+    const toggleButton = document.getElementById('toggle-ui');
+    const uiOverlay = document.getElementById('ui-overlay');
+    const startMessage = document.getElementById('start-message');
+    if (toggleButton) toggleButton.style.display = 'block';
+    if (uiOverlay) uiOverlay.style.display = 'none';
+
+
+    if (toggleButton) {
+      toggleButton.addEventListener('click', function() {
+        if (!uiOverlay) return;
+
+        if (uiOverlay.style.display === 'none') {
+          uiOverlay.style.display = 'block';
+          this.innerHTML = 'X';
+        } else {
+          uiOverlay.style.display = 'none';
+          this.innerHTML = '?';
+        }
+      });
+    }
+
+
+  });
+</script>
+</body>
+</html>
