@@ -4,8 +4,10 @@
 ## 🌌 Plongez dans un rêve musical
 
 Vous vous retrouvez dans un rêve froid et obscur. Au centre, une île flottante et un mystérieux piano. Est-il la clé pour réchauffer ce rêve et révéler ses secrets ?
+(Pour passer de qwerty vers azerty -> touche F1)
 
 👉 [Jouer maintenant](https://www.moustik.dev)
+
 
 ---
 
