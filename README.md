@@ -4,9 +4,12 @@
 ## 🌌 Plongez dans un rêve musical
 
 Vous vous retrouvez dans un rêve froid et obscur. Au centre, une île flottante et un mystérieux piano. Est-il la clé pour réchauffer ce rêve et révéler ses secrets ?
-(Pour passer de qwerty vers azerty -> touche F1)
+(Pour passer de qwerty vers azerty -> touche Y)
 
 👉 [Jouer maintenant](https://www.moustik.dev)
+
+Demo du jeu ! 
+[![Démonstration DreamLand Piano](https://img.youtube.com/vi/8eci-H-L4Xc/maxresdefault.jpg)](https://www.youtube.com/watch?v=8eci-H-L4Xc)
 
 
 ---
