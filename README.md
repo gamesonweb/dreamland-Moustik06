@@ -8,7 +8,7 @@ Vous vous retrouvez dans un rêve froid et obscur. Au centre, une île flottante
 
 👉 [Jouer maintenant](https://www.moustik.dev)
 
-Demo du jeu ! 
+Demo du jeu ! (image cliquable)
 [![Démonstration DreamLand Piano](https://img.youtube.com/vi/8eci-H-L4Xc/maxresdefault.jpg)](https://www.youtube.com/watch?v=8eci-H-L4Xc)
 
 
